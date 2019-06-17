@@ -21,7 +21,7 @@ public class StringUtils {
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
 
-        return String.format("%+"+amountOfPadding+"s",stringToBePadded);
+        return String.format("%-"+amountOfPadding+"s",stringToBePadded);
     }
 
     /**

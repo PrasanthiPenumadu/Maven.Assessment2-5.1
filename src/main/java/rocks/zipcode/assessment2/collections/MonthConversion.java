@@ -45,7 +45,10 @@ public class MonthConversion {
      * @return true if the monthNumber is in the keySet
      */
     public Boolean isValidNumber(Integer monthNumber) {
-        return null;
+        if(hmap.containsKey(monthNumber))
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -53,7 +56,10 @@ public class MonthConversion {
      * @return true if the monthName is in the valueSet
      */
     public Boolean isValidMonth(String monthName) {
-        return null;
+        if(hmap.containsKey(monthName))
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -68,6 +74,6 @@ public class MonthConversion {
      * @param monthName - name of month
      */
     public void update(Integer monthNumber, String monthName) {
-
+    hmap.replace(monthNumber,monthName);
     }
 }

@@ -15,16 +15,16 @@ import java.util.List;
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
 public class Shelter<_> {
-    List<Object> al=new ArrayList<Object>();
+    List<Ageable> al=new ArrayList<Ageable>();
     public Shelter() {
 
-        throw new NullPointerException();
+       // throw new NullPointerException();
     }
 
     /**
      * @return the number of item in the shelter
      */
-   List<Integer> list=new ArrayList<>();
+  // List<Integer> list=new ArrayList<>();
 
     public int size() {
 
@@ -33,11 +33,14 @@ public class Shelter<_> {
     }
 
     public void add(Object object) {
-        al.add(object);
+        al.add((Ageable) object);
     }
 
     public Boolean contains(Object object) {
-        return null;
+        if(al.contains(object))
+        return true;
+        else
+            return false;
     }
 
     public void remove(Object object) {
@@ -45,10 +48,11 @@ public class Shelter<_> {
     }
 
     public Object get(Integer index) {
-        return null;
+
+        return al.get(index);
     }
 
     public Integer getIndexOf(Object ageable) {
-        return 0;
+        return al.indexOf(ageable);
     }
 }

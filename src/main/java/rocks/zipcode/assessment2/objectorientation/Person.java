@@ -55,4 +55,10 @@ public class Person {
 
         return true;
     }
+    @Override
+    public String toString(){
+        String x="";
+     x="Person{id="+this.id+", name='"+this.name+"', address="+address.toString()+"}";
+        return x;
+    }
 }

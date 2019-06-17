@@ -79,8 +79,12 @@ public class Address {
         return true;
 
     }
-//    @Override
-//    public String toString(){
-//
-//    }
+    @Override
+    public String toString(){
+        Address add=new Address();
+        String x="";
+        x=x+"Address{addressLine1='"+this.addressLine1+"', addressLine2='"+this.addressLine2+"', city='"+this.city+"', state='"+this.state+"', zipcode='" +this.zipcode+ "'}" ;
+
+    return x;
+   }
 }

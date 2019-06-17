@@ -30,10 +30,10 @@ public class MonthConversion {
      * @param monthName - name of month
      * @return - the ordinal of the month in the year
      */
-    public int getNumber(String monthName) {
+    public Integer getNumber(String monthName) {
         //return hmap.;
         //Set<K> ke
-        int key=0;
+       Integer key=null;
         for(Map.Entry<Integer,String>entry:hmap.entrySet())
             if(entry.getValue().equals(monthName)){
           key= entry.getKey();}
@@ -56,7 +56,7 @@ public class MonthConversion {
      * @return true if the monthName is in the valueSet
      */
     public Boolean isValidMonth(String monthName) {
-        if(hmap.containsKey(monthName))
+        if(hmap.containsValue(monthName))
             return true;
         else
             return false;

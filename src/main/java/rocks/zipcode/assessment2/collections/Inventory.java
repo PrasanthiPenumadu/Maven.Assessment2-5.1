@@ -36,7 +36,8 @@ public class Inventory {
      * @param item - decrement the number of this item in stock by 1
      */
     public void removeItemFromInventory(String item) {
-        return;
+        list.remove(item);
+       // return;
     }
 
     /**
@@ -44,6 +45,6 @@ public class Inventory {
      * @return - return the number of items
      */
     public Integer getItemQuantity(String item) {
-        return null;
+        return list.size();
     }
 }
